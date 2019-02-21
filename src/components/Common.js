@@ -1,9 +1,3 @@
-/**
- * @component index.js
- * @description rn顶层页面
- * @time 2019/2/22
- * @author JUSTIN XU
- */
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 

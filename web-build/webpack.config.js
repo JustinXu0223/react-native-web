@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
     filename: 'bundle.web.js',
-    path: path.resolve(appDir, 'dist')
+    path: path.resolve(appDir, 'dist'),
   },
   module: {
     rules: [{
@@ -25,17 +25,17 @@ module.exports = {
           cacheDirectory: true,
           babelrc: false,
         },
-      },],
+      }],
     },
-      {
-        test: /\.(gif|jpe?g|png|svg)$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            name: '[name].[ext]'
-          }
-        }
-      }
+    {
+      test: /\.(gif|jpe?g|png|svg)$/,
+      use: {
+        loader: 'url-loader',
+        options: {
+          name: '[name].[ext]',
+        },
+      },
+    },
     ],
   },
   plugins: [
@@ -46,7 +46,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json', '.android.js', '.ios.js'],
     alias: {
-      'react-native$': 'react-native-web'
+      'react-native$': 'react-native-web',
     },
     modules: ['web_modules', 'node_modules'],
   },
