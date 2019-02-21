@@ -1,0 +1,125 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "extends": "airbnb",
+  "env": {
+    "es6": true
+  },
+  "plugins": [
+    "react",
+    "react-native",
+    "jsx-a11y",
+    "import"
+  ],
+  "globals": {
+    "__DEV__": true,
+    "__dirname": false,
+    "__fbBatchedBridgeConfig": false,
+    "alert": false,
+    "cancelAnimationFrame": false,
+    "cancelIdleCallback": false,
+    "clearImmediate": true,
+    "clearInterval": false,
+    "clearTimeout": false,
+    "console": false,
+    "document": false,
+    "escape": false,
+    "Event": false,
+    "EventTarget": false,
+    "exports": false,
+    "fetch": false,
+    "FormData": false,
+    "global": false,
+    "jest": false,
+    "Map": true,
+    "module": false,
+    "navigator": false,
+    "process": false,
+    "Promise": true,
+    "requestAnimationFrame": true,
+    "requestIdleCallback": true,
+    "Set": true,
+    "setImmediate": true,
+    "setInterval": false,
+    "setTimeout": false,
+    "window": false,
+    "XMLHttpRequest": false,
+    "pit": false
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  "rules": {
+    "no-underscore-dangle": ["error", { "allow": ["__APP__", "__ANDROID__", "__IOS__", "_root"] }],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "import/prefer-default-export": 0,
+    "react/no-unused-prop-types": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "react/prefer-stateless-function": [
+      1,
+      {
+        "ignorePureComponents": true
+      }
+    ],
+    "no-bitwise": "off",
+    "no-param-reassign": "off",
+    "max-len": [
+      0,
+      160,
+      4
+    ],
+    "arrow-parens": [
+      2,
+      "as-needed",
+      {
+        "requireForBlockBody": true
+      }
+    ],
+    "guard-for-in": "off",
+    "no-restricted-syntax": [
+      "error",
+      "BinaryExpression[operator='in']"
+    ],
+    "react/no-array-index-key": [0],
+    "import/no-unresolved": [0],
+    "no-shadow": [0],
+    "global-require": [0],
+    "consistent-return": [0],
+    "generator-star-spacing": [0],
+    "import/extensions": [0],
+    "object-curly-newline": [0],
+    "no-trailing-spaces": [0],
+    "no-useless-constructor": [0],
+    "arrow-body-style": [0],
+    "no-confusing-arrow": [0],
+    "no-plusplus": [0],
+    "camelcase": [0],
+    "react/no-string-refs": [0],
+    "no-unused-expressions": [0],
+    "no-debugger": [0],
+    "no-continue": [0]
+  }
+}
