@@ -6,13 +6,14 @@
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "setup": "yarn install && cd ios && pod install && cd .. && react-native link",
     "android": "react-native run-android --appIdSuffix=debug --no-packager && adb reverse tcp:8081 tcp:8081",
     "ios": "react-native run-ios",
     "iPhoneX": "react-native run-ios --simulator 'iPhone X'",
-    "web": "NODE_ENV=development webpack-dev-server -d --config ./web-build/webpack.config.js --inline --hot --colors",
-    "build": "NODE_ENV=production webpack -p --config ./web-build/webpack.config.js",
     "test": "jest",
-    "clear": "watchman watch-del-all && rm -rf $TMPDIR/react-* && rm -rf node_modules/ && yarn install && yarn start -- --reset-cache"
+    "clear": "watchman watch-del-all && rm -rf $TMPDIR/react-* && rm -rf node_modules/ && yarn install && yarn start -- --reset-cache",
+    "web": "NODE_ENV=development webpack-dev-server -d --config ./web-build/webpack.config.js --inline --hot --colors",
+    "build": "NODE_ENV=production webpack -p --config ./web-build/webpack.config.js"
   },
   "pre-commit": [
     "precommit-msg",

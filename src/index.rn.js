@@ -26,7 +26,7 @@ class App extends React.Component {
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>Ha Ha Ha Ha</Text>
+        <Text style={styles.instructions}>Native footer</Text>
       </View>
     );
   }
