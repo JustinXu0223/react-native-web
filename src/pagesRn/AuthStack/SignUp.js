@@ -1,28 +1,33 @@
 /**
- * @component SignIn.js
- * @description 登陆页面
- * @time 2019/2/21
+ * @component SignUp
+ * @description
+ * @time 2019/2/22
  * @author JUSTIN XU
  */
 import React from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+// // constants
+// import routers from 'constants/routers.rn';
+
 const ContainerView = styled.View``;
 const ItemText = styled.Text``;
 
-class SignIn extends React.Component {
+class SignUp extends React.PureComponent {
   render() {
     return (
       <ContainerView>
-        <ItemText>SignIn</ItemText>
+        <ItemText>
+          SignUp
+        </ItemText>
       </ContainerView>
     );
   }
 }
 
-SignIn.defaultProps = {};
+SignUp.defaultProps = {};
 
-SignIn.propTypes = {};
+SignUp.propTypes = {};
 
-export default SignIn;
+export default SignUp;

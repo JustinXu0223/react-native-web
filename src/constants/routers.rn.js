@@ -13,4 +13,10 @@ export default {
   signUp: 'app.auth.signUp',
   // Root Stack
   root: 'app.root',
+  // tabView
+  tabView: 'app.root.tabView',
+  // Root Stack -> TabView Stack -> Home
+  home: 'app.root.tabView.home',
+  // Root Stack -> TabView Stack -> Mine
+  mine: 'app.root.tabView.mine',
 };

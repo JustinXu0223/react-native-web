@@ -4,6 +4,8 @@
  * @time 2019/2/21
  * @author JUSTIN XU
  */
+import { moderateScale } from '../utils/scale';
+
 export default {
   primaryColor: '#543e3e',
   whiteColor: '#FFFFFF',
@@ -23,4 +25,6 @@ export default {
   videoPlayButtonBackgroundColor: 'rgba(0, 0, 0, .5)',
   videoPlayFooterBackgroundColor: 'rgba(0, 0, 0, .2)',
   labelItemColor: '#e8e8e8',
+
+  moderateScale: (size, factor) => moderateScale(size, factor),
 };

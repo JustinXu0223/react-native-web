@@ -6,7 +6,7 @@
  */
 import React from 'react';
 
-import Router from './pagesWeb/index';
+import Router from './pagesWeb';
 
 // utils
 import history from './utils/history';
