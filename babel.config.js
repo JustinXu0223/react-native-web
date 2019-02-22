@@ -1,10 +1,11 @@
 
 const {
   NODE_ENV,
-  IS_WEB,
+  platform,
 } = process.env;
 
 const isDev = NODE_ENV !== 'production';
+const IS_WEB = platform === 'web';
 
 let presets = [];
 

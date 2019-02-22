@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Router, Route, Switch } from 'react-router-dom';
+import { Dimensions } from 'react-native';
 import Loadable from 'react-loadable';
 
 // constants
@@ -22,20 +23,13 @@ const AsyncMine = Loadable({
 });
 
 class App extends React.Component {
-  state = {
-    isActive: false,
-  };
-
   render() {
     const {
-      state: {
-        isActive,
-      },
       props: {
         history,
       },
     } = this;
-    console.log(isActive);
+    console.log(Dimensions.get('window'));
     return (
       <Router history={history}>
         <Switch>
