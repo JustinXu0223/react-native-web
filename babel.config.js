@@ -20,7 +20,7 @@ let plugins = [
       pagesWeb: './src/pagesWeb',
       services: './src/services',
       utils: './src/utils',
-      // '^react-native$': 'react-native-web',
+      '^react-native$': 'react-native-web',
     },
   }],
 ];
@@ -63,7 +63,7 @@ if (IS_WEB) {
   ];
   plugins = [
     ...plugins,
-    // ['import', { libraryName: 'antd-mobile-rn' }],
+    ['import', { libraryName: 'antd-mobile-rn' }],
   ];
 }
 
