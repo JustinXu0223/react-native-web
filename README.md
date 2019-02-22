@@ -1,73 +1,39 @@
+## name `react-native-web`
 
-const {
-  NODE_ENV,
-  IS_WEB,
-} = process.env;
+### 相关技术
+* Bale `react-native-cli`
+* Eslint `airbnb + babel-eslint`
+* Ui `react 16.6.3 + react-native 0.58.5 + styled-components`
+* Router `react-navigation`
+* Xhr `axios`
+* Handle state `mobx`
+* Other library `...`
 
-const isDev = NODE_ENV !== 'production';
+### Version
+```html
+node 8.0+(v8.12.0)
+npm 5.0+(v6.5.0)
+java (v1.8.0_172)
+```
 
-let presets = [];
+### RN Getting Started
+* First step run `sudo gem install cocoapods -v 1.5.3`
+* Second step run `yarn setup`
 
-let plugins = [
-  ['module-resolver', {
-    alias: {
-      assets: './src/assets',
-      components: './src/components',
-      config: './src/config',
-      constants: './src/constants',
-      models: './src/models',
-      pagesRn: './src/pagesRn',
-      pagesWeb: './src/pagesWeb',
-      services: './src/services',
-      utils: './src/utils',
-      '^react-native$': 'react-native-web',
-    },
-  }],
-];
+### Serve for ios/android
+* Third step run `yarn ios` OR `yarn android`
 
-if (IS_WEB) {
-  presets = [
-    ...presets,
-    [
-      '@babel/preset-env', {
-        modules: false,
-        targets: {
-          browsers: [
-            'last 2 versions',
-            'safari >= 7',
-          ],
-        },
-      },
-    ],
-    '@babel/preset-react',
-  ];
-  plugins = [
-    ...plugins,
-    ['@babel/plugin-proposal-decorators', { legacy: true }],
-    '@babel/plugin-syntax-dynamic-import',
-    '@babel/plugin-syntax-import-meta',
-    ['@babel/plugin-proposal-class-properties', { loose: true }],
-    '@babel/plugin-proposal-json-strings',
-    '@babel/plugin-proposal-function-sent',
-    '@babel/plugin-proposal-export-namespace-from',
-    '@babel/plugin-proposal-numeric-separator',
-    '@babel/plugin-proposal-throw-expressions',
-    ['@babel/plugin-transform-runtime'],
-    ['import', { libraryName: 'antd-mobile', style: true }],
-    ['babel-plugin-styled-components', { displayName: isDev, fileName: isDev }],
-  ];
-} else {
-  presets = [
-    'module:metro-react-native-babel-preset',
-    ...presets,
-  ];
-  plugins = [
-    ...plugins,
-    ['import', { libraryName: 'antd-mobile-rn' }],
-  ];
-}
 
-module.exports = {
-  presets,
-  plugins,
-};
+### Web Getting Started
+* First step run `yarn setup-web`
+
+### Server for web
+* Third step run `yarn start-web`
+
+### Bundle analyzer 
+* run `yarn start-b`
+
+### Build
+* sating run `yarn build-s`
+* production run `yarn build-p`
+

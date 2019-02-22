@@ -1,6 +1,9 @@
 {
   "name": "react_native_web",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "react react-native mbox",
+  "author": "Justin Xu",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
