@@ -1,6 +1,6 @@
 /**
- * @component Home.js
- * @description 首页
+ * @component Demo.js
+ * @description Demo页面
  * @time 2019/2/22
  * @author JUSTIN XU
  */
@@ -9,47 +9,23 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 // constants
-import routers from 'constants/routers.web';
+// import routers from 'constants/routers.web';
 
 const ContainerView = styled.div``;
 
-const ItemTouch = styled.div`
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid red;
-  margin-top: 10px;
-`;
-
-class Home extends React.Component {
+class Demo extends React.Component {
   render() {
-    const {
-      props: {
-        history,
-      },
-    } = this;
     return (
       <ContainerView>
-        <div>Home</div>
-        <ItemTouch
-          onClick={() => history.push(routers.demo)}
-        >
-          点我去Demo
-        </ItemTouch>
-        <ItemTouch
-          onClick={() => history.push(routers.signIn)}
-        >
-          点我去SIGN
-        </ItemTouch>
+        <div>DemoDemoDemo</div>
       </ContainerView>
     );
   }
 }
 
-Home.defaultProps = {};
+Demo.defaultProps = {};
 
-Home.propTypes = {
+Demo.propTypes = {
   history: PropTypes.shape({
     action: PropTypes.string,
     go: PropTypes.func,
@@ -73,4 +49,4 @@ Home.propTypes = {
   }).isRequired,
 };
 
-export default Home;
+export default Demo;

@@ -42,10 +42,10 @@ class Home extends React.Component {
           </ItemText>
         </ButtonTouch>
         <ButtonTouch
-          onPress={() => navigation.navigate(routers.signUp)}
+          onPress={() => navigation.navigate(routers.helper)}
         >
           <ItemText>
-            去注册
+            帮助页面
           </ItemText>
         </ButtonTouch>
       </ContainerView>

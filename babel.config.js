@@ -1,15 +1,15 @@
 
 const {
   NODE_ENV,
-  platform,
+  IS_WEB,
 } = process.env;
 
 const isDev = NODE_ENV !== 'production';
-const IS_WEB = platform === 'web';
 
 let presets = [];
 
 let plugins = [
+  ['@babel/plugin-proposal-decorators', { legacy: true }],
   ['module-resolver', {
     alias: {
       assets: './src/assets',
@@ -44,7 +44,6 @@ if (IS_WEB) {
   ];
   plugins = [
     ...plugins,
-    ['@babel/plugin-proposal-decorators', { legacy: true }],
     '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-syntax-import-meta',
     ['@babel/plugin-proposal-class-properties', { loose: true }],

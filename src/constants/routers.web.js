@@ -14,5 +14,6 @@ export default {
   // Mine Stack
   mine: '/mine',
   // Common Stack
+  demo: '/demo',
   notFound: '/404',
 };

@@ -9,18 +9,23 @@ import { createStackNavigator } from 'react-navigation';
 // constants
 import routers from 'constants/routers.rn';
 
+// modals
+import HelperScreen from './Modals/Helper';
+
 // pages
-import TabStack from './TabStack/index';
+import TabStack from './TabStack';
 
 const RouteConfigs = {
+  /** Modals Stack */
+  [routers.helper]: HelperScreen,
   /** Tab Stack */
   [routers.tabView]: TabStack,
 };
 
 const NavigatorConfig = {
   initialRouteName: routers.tabView,
-  mode: 'card',
-  headerMode: 'none',
+  mode: 'modal',
+  // headerMode: 'none',
   cardStyle: { shadowColor: 'transparent' },
 };
 

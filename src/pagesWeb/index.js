@@ -23,7 +23,7 @@ const AsyncNotFound = Loadable({
 
 // Root Stack
 const AsyncRoot = Loadable({
-  loader: () => import('./root'),
+  loader: () => import('./Root'),
   loading: Loading,
 });
 

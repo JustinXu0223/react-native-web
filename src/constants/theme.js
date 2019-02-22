@@ -27,4 +27,9 @@ export default {
   labelItemColor: '#e8e8e8',
 
   moderateScale: (size, factor) => moderateScale(size, factor),
+  tabBarHeight: 61,
+  // rn
+
+  // web
+  tabBarZIndex: 999,
 };
