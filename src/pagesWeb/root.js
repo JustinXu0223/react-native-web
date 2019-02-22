@@ -22,12 +22,20 @@ const AsyncMine = Loadable({
 });
 
 class App extends React.Component {
+  state = {
+    isActive: false,
+  };
+
   render() {
     const {
+      state: {
+        isActive,
+      },
       props: {
         history,
       },
     } = this;
+    console.log(isActive);
     return (
       <Router history={history}>
         <Switch>
