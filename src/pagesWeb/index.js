@@ -4,7 +4,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
 // constants
-import routers from 'constants/routers.web';
+import { routers } from 'constants';
 
 // components
 import Loading from 'components/Loading';

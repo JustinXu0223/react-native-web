@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 // constants
-import routers from 'constants/routers.web';
+import { routers } from 'constants';
 
 const ContainerView = styled.div``;
 

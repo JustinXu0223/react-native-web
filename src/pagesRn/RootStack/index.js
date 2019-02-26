@@ -7,7 +7,7 @@
 import { createStackNavigator } from 'react-navigation';
 
 // constants
-import routers from 'constants/routers.rn';
+import { routers } from 'constants';
 
 // modals
 import HelperScreen from './Modals/Helper';

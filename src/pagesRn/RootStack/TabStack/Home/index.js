@@ -10,8 +10,7 @@ import { Image } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
 // constants
-import routers from 'constants/routers.rn';
-import theme from 'constants/theme';
+import { routers, theme } from 'constants';
 
 // static source
 import homeIcon from 'assets/images/tabbar/picture.png';

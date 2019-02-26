@@ -11,7 +11,10 @@ import styled from 'styled-components';
 // constants
 import routers from 'constants/routers.rn';
 
-const ContainerView = styled.View``;
+// components
+import ContainerView from 'components/Layout/ContainerView';
+import NotData from 'components/NotData';
+
 const ItemText = styled.Text``;
 
 const ButtonTouch = styled.TouchableOpacity`
@@ -48,6 +51,7 @@ class Home extends React.Component {
             帮助页面
           </ItemText>
         </ButtonTouch>
+        <NotData />
       </ContainerView>
     );
   }

@@ -18,7 +18,7 @@ import routers from 'constants/routers.web';
 import theme from 'constants/theme';
 
 // components
-import ImgIcon from 'components/ImgIcon';
+import Thumbnail from 'components/Thumbnail';
 
 const ContainerView = styled.div`
   height: ${theme.tabBarHeight}px;
@@ -79,9 +79,8 @@ class TabBarWeb extends React.PureComponent {
             return false;
           }}
         >
-          <ImgIcon
-            userRem={false}
-            src={isActive ? item.focusIcon : item.unFocusIcon}
+          <Thumbnail
+            source={isActive ? item.focusIcon : item.unFocusIcon}
             width={item.iconWidth}
             height={item.iconHeight}
           />

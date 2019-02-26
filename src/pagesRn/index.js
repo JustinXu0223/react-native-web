@@ -7,7 +7,7 @@
 import { createSwitchNavigator } from 'react-navigation';
 
 // constants
-import routers from 'constants/routers.rn';
+import { routers } from 'constants';
 
 // pages
 import AuthStack from './AuthStack';

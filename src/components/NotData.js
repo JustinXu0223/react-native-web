@@ -6,7 +6,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import { StyleSheet, View, Text } from 'react-native';
 
 // static source
 import NotDataIcon from 'assets/images/not-data.png';
@@ -15,23 +15,20 @@ import NotDataIcon from 'assets/images/not-data.png';
 import theme from 'constants/theme';
 
 // components
-import ImgIcon from './ImgIcon';
+import Thumbnail from './Thumbnail';
 
-const ContainerView = styled.div`
-  flex: 1;
-  background-color: ${theme.whiteColor};
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 106px;
-`;
-
-const FooterText = styled.div`
-  font-size: ${props => props.fontSize};
-  color: ${theme.primaryColor};
-  margin-top: 18px;
-`;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: theme.whiteColor,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  footer: {
+    color: theme.primaryColor,
+    marginTop: theme.moderateScale(15),
+  },
+});
 
 class NotData extends React.PureComponent {
   render() {
@@ -46,17 +43,26 @@ class NotData extends React.PureComponent {
       return null;
     }
     return (
-      <ContainerView>
-        <ImgIcon
-          src={icon || NotDataIcon}
+      <View
+        style={[
+          styles.container,
+        ]}
+      >
+        <Thumbnail
+          source={icon || NotDataIcon}
           size={notDataSize}
         />
-        <FooterText
-          fontSize={fontSize}
+        <Text
+          style={[
+            styles.footer,
+            {
+              fontSize: theme.moderateScale(fontSize),
+            },
+          ]}
         >
           {notDataText}
-        </FooterText>
-      </ContainerView>
+        </Text>
+      </View>
     );
   }
 }

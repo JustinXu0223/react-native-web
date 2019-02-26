@@ -10,8 +10,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
 // constants
-import routers from 'constants/routers.web';
-import theme from 'constants/theme';
+import { routers, theme } from 'constants';
 
 // components
 import Loading from 'components/Loading';

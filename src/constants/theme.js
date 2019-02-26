@@ -26,7 +26,10 @@ export default {
   videoPlayFooterBackgroundColor: 'rgba(0, 0, 0, .2)',
   labelItemColor: '#e8e8e8',
 
+  activeOpacity: 0.65,
   moderateScale: (size, factor) => moderateScale(size, factor),
+  // height
+  headerHeight: 45,
   tabBarHeight: 61,
   // rn
 

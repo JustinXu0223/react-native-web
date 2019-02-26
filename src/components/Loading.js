@@ -6,7 +6,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ActivityIndicator, StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text, ActivityIndicator } from 'react-native';
 
 // constants
 import theme from 'constants/theme';
@@ -21,12 +21,44 @@ const styles = StyleSheet.create({
 });
 
 class Loading extends React.PureComponent {
+  renderContent = () => {
+    const {
+      props: {
+        isLoading,
+        size,
+        color,
+        error,
+      },
+    } = this;
+    if (isLoading) {
+      return (
+        <ActivityIndicator
+          size={size}
+          color={color}
+          animating
+        />
+      );
+    }
+    if (error) {
+      return (
+        <Text
+          style={[
+            {
+              fontSize: theme.moderateScale(16),
+            },
+          ]}
+        >
+          对不起, 页面加载失败
+        </Text>
+      );
+    }
+    return null;
+  };
+
   render() {
     const {
       props: {
         style,
-        size,
-        color,
       },
     } = this;
     return (
@@ -36,11 +68,7 @@ class Loading extends React.PureComponent {
           style,
         ]}
       >
-        <ActivityIndicator
-          size={size}
-          color={color}
-          animating
-        />
+        {this.renderContent()}
       </View>
     );
   }
@@ -48,14 +76,21 @@ class Loading extends React.PureComponent {
 
 Loading.defaultProps = {
   style: {},
+  isLoading: true,
   size: 'large',
-  color: theme.whiteColor,
+  color: theme.primaryColor,
+  error: null,
 };
 
 Loading.propTypes = {
   style: PropTypes.objectOf(PropTypes.any),
+  isLoading: PropTypes.bool,
   size: PropTypes.string,
   color: PropTypes.string,
+  error: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]),
 };
 
 export default Loading;

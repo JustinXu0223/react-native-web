@@ -7,8 +7,7 @@
 import { createBottomTabNavigator } from 'react-navigation';
 
 // constants
-import routers from 'constants/routers.rn';
-import theme from 'constants/theme';
+import { routers, theme } from 'constants';
 
 // pages
 import HomeScreen from './Home';
@@ -32,7 +31,7 @@ const NavigatorConfig = {
       marginLeft: 0,
     },
     style: {
-      height: 61,
+      height: theme.tabBarHeight,
       backgroundColor: theme.whiteColor,
       shadowOpacity: 0.05,
       shadowRadius: 2,
