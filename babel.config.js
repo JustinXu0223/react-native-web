@@ -21,7 +21,6 @@ let plugins = [
       pagesWeb: './src/pagesWeb',
       services: './src/services',
       utils: './src/utils',
-      '^react-native$': 'react-native-web',
     },
   }],
 ];
