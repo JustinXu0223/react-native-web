@@ -16,7 +16,7 @@ module.exports = merge(base, {
     new webpack.BannerPlugin(`${packjson.name}: version(${packjson.version})`),
     new ParallelUglifyPlugin({
       cacheDir: '.cache/',
-      uglifyJS: {
+      uglifyES: {
         output: {
           beautify: false, // 不需要格式化
           comments: false, // 保留注释

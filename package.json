@@ -20,7 +20,7 @@
     "dev": "webpack-dev-server --progress --colors --config web-build/webpack.dev.js",
     "start-web": "env-cmd start:dev yarn dev",
     "start-b": "BUNDLE=1 yarn start",
-    "release": "webpack --progress --colors --config build/web-build.prod.js --profile --json > stats.json",
+    "release": "webpack --progress --colors --config web-build/webpack.prod.js --profile --json > stats.json",
     "build-s": "env-cmd build:staging yarn release",
     "build-p": "env-cmd build:prod yarn release"
   },
