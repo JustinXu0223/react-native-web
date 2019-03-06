@@ -8,6 +8,8 @@ const isDev = NODE_ENV !== 'production';
 
 let presets = [];
 
+let env = {};
+
 let plugins = [
   ['@babel/plugin-proposal-decorators', { legacy: true }],
   ['module-resolver', {
@@ -41,6 +43,17 @@ if (IS_WEB) {
     ],
     '@babel/preset-react',
   ];
+  env = {
+    ...env,
+    development: {},
+    production: {
+      plugins: [
+        ['transform-react-remove-prop-types', {
+          ignoreFilenames: ['node_modules'],
+        }],
+      ],
+    },
+  };
   plugins = [
     ...plugins,
     '@babel/plugin-syntax-dynamic-import',
@@ -68,5 +81,6 @@ if (IS_WEB) {
 
 module.exports = {
   presets,
+  env,
   plugins,
 };
