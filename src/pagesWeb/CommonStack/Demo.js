@@ -1,5 +1,5 @@
 /**
- * @component Demo.js
+ * @component DemoList.js
  * @description Demo页面
  * @time 2019/2/22
  * @author JUSTIN XU
@@ -11,13 +11,55 @@ import styled from 'styled-components';
 // constants
 // import routers from 'constants/routers.web';
 
-const ContainerView = styled.div``;
+// components
+import ContainerView from 'components/Layout/ContainerView';
+import DemoList from 'components/DemoList';
+
+const TestView = styled.div`
+  display: flex;
+`;
+
+const TestText = styled.div`
+  color: red;
+  font-size: ${props => props.fontSize || '18px'};
+`;
+
+const TestTouch = styled.div`
+`;
+
 
 class Demo extends React.Component {
+  state = {
+    testVal: '',
+  };
+
+  onToggleVal = () => {
+    const {
+      state: {
+        testVal,
+      },
+    } = this;
+    const data = testVal ? '' : 'test 123';
+    this.setState({ testVal: data });
+  }
+
   render() {
+    const {
+      state: {
+        testVal,
+      },
+      // props: {
+      // },
+    } = this;
     return (
       <ContainerView>
-        <div>DemoDemoDemo</div>
+        <DemoList />
+        <TestView>
+          <TestText>{testVal}</TestText>
+          <TestTouch onClick={this.onToggleVal}>
+            <TestText fontSize={16}>WEB</TestText>
+          </TestTouch>
+        </TestView>
       </ContainerView>
     );
   }

@@ -9,7 +9,7 @@ import { createStackNavigator } from 'react-navigation';
 // constants
 import { routers } from 'constants';
 
-// modals
+// models
 import HelperScreen from './Modals/Helper';
 
 // pages

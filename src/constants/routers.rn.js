@@ -16,7 +16,7 @@ export default {
   // tabView
   tabView: 'app.root.tabView',
   // Root Stack -> Modals Stack -> Helper
-  helper: 'app.root.modals.helper',
+  helper: 'app.root.models.helper',
   // Root Stack -> TabView Stack -> Home
   home: 'app.root.tabView.home',
   // Root Stack -> TabView Stack -> Mine

@@ -41,7 +41,7 @@ class Home extends React.Component {
           onPress={() => navigation.navigate(routers.signIn)}
         >
           <ItemText>
-            去登录
+            去登录1
           </ItemText>
         </ButtonTouch>
         <ButtonTouch

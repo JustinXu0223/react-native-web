@@ -1,0 +1,7 @@
+public/
+node_modules/
+dist*/
+src/library/
+www/
+.cache/
+.idea/

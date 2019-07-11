@@ -19,7 +19,7 @@ const RouteConfig = {
 };
 
 const NavigatorConfig = {
-  initialRouteName: routers.home,
+  initialRouteName: routers.mine,
   tabBarOptions: {
     activeTintColor: theme.whiteColor,
     activeBackgroundColor: theme.dangerColor,

@@ -8,18 +8,59 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+// components
+import ContainerView from 'components/Layout/ContainerView';
+import DemoList from 'components/DemoList';
+
 // constants
 
-const ContainerView = styled.View``;
-const ItemText = styled.Text``;
+const TestView = styled.View`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
+const TestText = styled.Text`
+  color: #000;
+  font-size: ${props => props.fontSize || '18px'};
+`;
+
+const TestTouch = styled.TouchableOpacity`
+`;
 
 class Mine extends React.Component {
+  state = {
+    testVal: 'test',
+  };
+
+  onToggleVal = () => {
+    const {
+      state: {
+        testVal,
+      },
+    } = this;
+    const data = testVal ? '' : 'test 123';
+    this.setState({ testVal: data });
+  }
+
   render() {
+    const {
+      state: {
+        testVal,
+      },
+      // props: {
+      // },
+    } = this;
     return (
       <ContainerView>
-        <ItemText>
-          Mine
-        </ItemText>
+        <DemoList />
+        <TestView>
+          <TestText>{testVal}</TestText>
+          <TestTouch onClick={this.onToggleVal}>
+            <TestText fontSize={16}>RN</TestText>
+          </TestTouch>
+        </TestView>
       </ContainerView>
     );
   }

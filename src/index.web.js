@@ -5,16 +5,20 @@
  * @author JUSTIN XU
  */
 import React from 'react';
-
+import { Provider, observer } from 'mobx-react';
 import Router from './pagesWeb';
 
+import RootStore from './models';
 // utils
 import history from './utils/history';
 
+@observer
 class App extends React.Component {
   render() {
     return (
-      <Router history={history} />
+      <Provider rootStore={RootStore}>
+        <Router history={history} />
+      </Provider>
     );
   }
 }

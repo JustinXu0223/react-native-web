@@ -50,9 +50,9 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga/yoga.podspec"
 
 SPEC CHECKSUMS:
-  React: 16c4fb7ce3fc30c041bce809ceae33bf57e7c142
-  yoga: 0885622311729a02c2bc02dca97167787a51488b
+  React: 6cd5e6fcc3b6a52d2fb27a638f622139da710dff
+  yoga: 0e0009ffb2544aeead64a1209f3d488d3849947b
 
 PODFILE CHECKSUM: 1ce693442e2fa2341b5b772038026dc6e57c56c0
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.4
