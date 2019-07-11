@@ -57,7 +57,7 @@ class Mine extends React.Component {
         <DemoList />
         <TestView>
           <TestText>{testVal}</TestText>
-          <TestTouch onClick={this.onToggleVal}>
+          <TestTouch onPress={this.onToggleVal}>
             <TestText fontSize={16}>RN</TestText>
           </TestTouch>
         </TestView>

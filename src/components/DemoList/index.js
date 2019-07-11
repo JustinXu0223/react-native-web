@@ -56,17 +56,20 @@ class DemoListView extends React.Component {
     } = this;
     if (!list.length) return null;
     return list.map(item => (
-      <View style={styles.item}>
+      <View
+        style={styles.item}
+        key={item.id}
+      >
         <Text>{item.number}</Text>
         <TouchableOpacity
           style={styles.button}
-          onClick={() => incrementReq(item)}
+          onPress={() => incrementReq(item)}
         >
           <Text>增加</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
-          onClick={() => decreaseReq(item)}
+          onPress={() => decreaseReq(item)}
         >
           <Text>减少</Text>
         </TouchableOpacity>

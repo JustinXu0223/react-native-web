@@ -5,12 +5,11 @@
  * @author JUSTIN XU
  */
 import React from 'react';
-import { observer, Provider } from 'mobx-react';
+import { Provider } from 'mobx-react';
 import Router from './pagesRn';
 
 import RootStore from './models';
 
-@observer
 class App extends React.Component {
   render() {
     return (
